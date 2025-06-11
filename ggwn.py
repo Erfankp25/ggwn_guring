@@ -148,6 +148,7 @@ def about():
     st.write("Model dilatih di Google Colab dan diimplementasikan dengan Streamlit.")
 
 # Main app
+# Main app
 def main():
     if "login" not in st.session_state:
         st.session_state["login"] = False
@@ -167,9 +168,9 @@ def main():
         elif selected == "Tentang":
             about()
         elif selected == "Logout":
-    st.session_state["login"] = False
-    st.experimental_rerun()
-    return
+            st.session_state["login"] = False
+            st.rerun()
+            return  # 👈 Diperlukan untuk mencegah eksekusi lanjutan
 
 if __name__ == '__main__':
     main()
