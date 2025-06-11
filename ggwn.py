@@ -167,8 +167,10 @@ def main():
         elif selected == "Tentang":
             about()
         elif selected == "Logout":
-            st.session_state["login"] = False
-            st.experimental_rerun()
+    st.session_state["login"] = False
+    st.experimental_rerun()
+    return  # Hindari eksekusi lanjutan setelah rerun
+
 
 if __name__ == '__main__':
     main()
