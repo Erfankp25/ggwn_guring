@@ -166,11 +166,10 @@ def main():
             prediction()
         elif selected == "Tentang":
             about()
-        elif selected == "Logout":
+           elif selected == "Logout":
     st.session_state["login"] = False
     st.experimental_rerun()
-    return  # Hindari eksekusi lanjutan setelah rerun
-
+    return
 
 if __name__ == '__main__':
     main()
